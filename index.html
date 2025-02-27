@@ -356,15 +356,43 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 	    <link rel="stylesheet" href="styles.css">
+
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-
 	createChat({
-		webhookUrl: 'https://zhentingle.app.n8n.cloud/webhook/a99be711-b57e-4409-8506-7d21ac589990/chat',
-      initialMessages: [
-		'您好! 🐻',
-		'我是熊熊，今天能怎样协助您的旅游需求呢?']});
+    webhookUrl: 'https://zhentingle.app.n8n.cloud/webhook/a99be711-b57e-4409-8506-7d21ac589990/chat',
+    webhookConfig: {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer YOUR_API_KEY'
+        }
+    },
+    target: '#n8n-chat',
+    mode: 'window',
+    chatInputKey: 'chatInput',
+    chatSessionKey: 'sessionId',
+    metadata: {},
+    showWelcomeScreen: false,
+    defaultLanguage: 'zh',
+    initialMessages: [
+        '您好！👋',
+        '我是熊熊，有什么可以帮助您的吗？'
+    ],
+    i18n: {
+        zh: {
+            title: '您好！👋',
+            subtitle: "开始聊天。我们24小时为您提供帮助。",
+            footer: '',
+            getStarted: '新的对话',
+            inputPlaceholder: '输入您的问题...',
+        }
+    }
+});
+
 </script>
 </body>
 </html>
+
+
