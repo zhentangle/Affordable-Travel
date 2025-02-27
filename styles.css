@@ -1,9 +1,9 @@
 :root {
-	--chat--color-primary: black;
-	--chat--color-primary-shade-50: black;
-	--chat--color-primary-shade-100: black;
-	--chat--color-secondary: black;
-	--chat--color-secondary-shade-50: black;
+	--chat--color-primary: #ffd700;
+	--chat--color-primary-shade-50: #e6be8a;
+	--chat--color-primary-shade-100: #e6be8a;
+	--chat--color-secondary: #ffd700;
+	--chat--color-secondary-shade-50: #e6be8a;
 	--chat--color-white: #ffffff;
 	--chat--color-light: #f2f4f8;
 	--chat--color-light-shade-50: #e6e9f1;
@@ -44,9 +44,9 @@
 	--chat--message--user--border: none;
 	--chat--message--pre--background: rgba(0, 0, 0, 0.05);
 
-	--chat--toggle--background: black;
-	--chat--toggle--hover--background: black;
-	--chat--toggle--active--background: black;
+	--chat--toggle--background: #ffd700;
+	--chat--toggle--hover--background: #e6be8a;
+	--chat--toggle--active--background: #e6be8a;
 	--chat--toggle--color: var(--chat--color-white);
 	--chat--toggle--size: 64px;
 }
