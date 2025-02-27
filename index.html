@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affordable Travel - 实惠旅游</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .section {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+    .package, .cruise, .tour {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.package:hover, 
+.cruise:hover, 
+.tour:hover {
+    transform: scale(1.05);
+}
+        .preview {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 100;
+    overflow: hidden;
+}
+      .preview {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.package:hover .preview, 
+.cruise:hover .preview, 
+.tour:hover .preview {
+    opacity: 1;
+}
+        .package:hover .preview, .cruise:hover .preview, .tour:hover .preview {
+            display: block;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }#chatButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+#chatButton:hover {
+    background-color: #ff8c00;
+    transform: scale(1.1);
+}
+
+    </style>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        欢迎来到实惠旅游
+    </header>
+    
+    <div class="section" id="packages">
+        <h2>旅游套餐</h2>
+        <div class="package">
+            坎昆全包套餐
+            <div class="preview">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.UKveW3bFvfrxOD4bGPiJTwHaHa&pid=Api" alt="坎昆度假村">
+                包括往返机票和全包式度假村住宿，让您在加勒比海的美丽海滩上尽情放松。
+            </div>
+        </div>
+        <div class="package">
+            欧洲经典豪华巴士团
+            <div class="preview">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.xbqZvp-nqtMEjexnd1dhuwHaEp&pid=Api" alt="欧洲经典豪华巴士团">
+                游览巴黎、罗马、伦敦等著名城市，入住高端酒店，享受专业导览。
+            </div>
+        </div>
+        <div class="package">
+            黄石公园深度游
+            <div class="preview">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.GxGHuwC_Qj_hXXodX_qUlgHaFj&pid=Api" alt="黄石公园">
+                适合大自然爱好者的巴士旅行，探索黄石公园令人惊叹的风景，配有专业导游。
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" id="cruiselines">
+        <h2>邮轮航线</h2>
+        
+        <h3>豪华邮轮</h3>
+        <div class="cruise">
+            皇家加勒比 - 海洋奇迹号
+            <div class="preview">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.rqjXUz6RI9925HqV31ilqAHaEW&pid=Api" alt="海洋奇迹号">
+                这艘豪华邮轮提供顶级娱乐和美食选择，适合高端游客。
+            </div>
+        </div>
+        <div class="cruise">
+            地中海邮轮
+            <div class="preview">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.7WPUy6HKMo2TiUOs0RijpAHaFj&pid=Api" alt="地中海邮轮">
+                体验意大利风格的豪华邮轮，畅游地中海沿岸迷人城市。
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" id="tours">
+        <h2> 旅游线路</h2>
+        <div class="tour">
+            红线「西欧经典」7天
+            <div class="preview">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.h8IIvpqeqzn7a7Gcy9KMBgHaFL&pid=Api" alt="西欧经典">
+                途经德国、荷兰、比利时、法国和卢森堡，适合初次欧洲旅行者。
+            </div>
+        </div>
+        <div class="tour">
+            蓝线「东欧璀璨」7天
+            <div class="preview">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.LrVz53Jmjs3ZgDajCOnSkAHaFL&pid=Api" alt="东欧璀璨">
+                涵盖德国、瑞士、捷克、匈牙利、奥地利、斯洛伐克和列支敦士登。
+            </div>
+        </div>
+        <div class="tour">
+            绿线「南法意式」7天
+            <div class="preview">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.Y9d9q7ybjKFctY_gyKeC1QHaFL&pid=Api" alt="南法意式">
+                游览瑞士、意大利、梵蒂冈、摩纳哥和法国南部，感受丰富历史文化。
+            </div>
+        </div>
+        <div class="tour">
+            紫线「英伦贵族」7天
+            <div class="preview">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.HpDtbyPSULBP3gLf_viftAHaFL&pid=Api" alt="英伦贵族">
+                探索英国、英格兰和苏格兰，包括尼斯湖。
+            </div>
+        </div>
+        <div class="tour">
+            黄线「热情西葡」7天
+            <div class="preview">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.G3bE0lOQTltmxkc3tR3uOAHaFL&pid=Api" alt="热情西葡">
+                深入西班牙和葡萄牙，感受南欧的热情与活力。
+            </div>
+        </div>
+    </div>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    let items = document.querySelectorAll(".package, .cruise, .tour");
+    items.forEach(item => {
+        item.addEventListener("click", function() {
+            // Close other previews
+            items.forEach(el => {
+                if (el !== item) el.classList.remove("active");
+            });
+
+            // Toggle this one
+            this.classList.toggle("active");
+        });
+    });
+});
+</script>
+ 
+});
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://zhentingle.app.n8n.cloud/webhook/a99be711-b57e-4409-8506-7d21ac589990/chat',
+      initialMessages: [
+		'您好! 🐻',
+		'我是熊熊，今天能怎样协助您的旅游需求呢?'],
+		
+	});
+</script>
+</body>
+</html>
+
