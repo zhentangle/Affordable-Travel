@@ -93,6 +93,33 @@
     background-color: #ff8c00;
     transform: scale(1.1);
 }
+ .iframe-wrapper {
+        display: flex;
+        justify-content: center;  /* Centers the iframe horizontally */
+        align-items: center;  /* Centers it vertically (optional) */
+        width: 100vw;  /* Full width of viewport */
+        height: 80vh;  /* Adjust as needed */
+        overflow-x: auto;  /* Enables horizontal scrolling */
+        overflow-y: hidden;  /* Prevents vertical scrolling */
+        padding: 10px 0;  /* Optional padding */
+    }
+
+    /* The iframe container to control sizing */
+    .iframe-container {
+        display: block;
+        width: 90%;  /* Adjust width as needed */
+        max-width: 1200px;  /* Ensures it doesn't stretch too wide */
+        height: 600px;  /* Adjust height as needed */
+        border: none; /* Removes border */
+    }
+
+    /* Styles for the iframe itself */
+    .drive-folder {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;  /* Optional rounded corners */
+    }
+
 
     </style>
   <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
@@ -101,7 +128,12 @@
     <header>
         欢迎您使用实惠旅游，若您有任何感兴趣的套餐可以立马点击右下角询问细节！
     </header>
-    
+<div class="iframe-wrapper">
+    <div class="iframe-container">
+        <iframe src="https://drive.google.com/embeddedfolderview?id=1A58y8FJ7j1wCzlwc-uM9gC7HvJCT2N_R&usp=sharing#grid" 
+                class="drive-folder"></iframe>
+    </div>
+</div> 
     <div class="section" id="packages">
         <h2>旅游套餐</h2>
         <div class="package">
@@ -332,8 +364,6 @@
         <img src="https://d3hv8kxfi6k0xa.cloudfront.net/craft/_lineSmall2x/orange-2023.jpg">
         <p>探索法国、西班牙和安道尔的迷人风光，感受多元文化的融合与历史遗迹的魅力。</p>
     </div>
-</div>
-
 
 
 
@@ -394,5 +424,3 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 </body>
 </html>
-
-
