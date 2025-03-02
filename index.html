@@ -93,27 +93,27 @@
     background-color: #ff8c00;
     transform: scale(1.1);
 }
-<style>
-    /* Wrapper to keep everything centered */
-    .iframe-wrapper {
+ .iframe-wrapper {
         display: flex;
-        justify-content: center;  /* Centers horizontally */
-        align-items: center;  /* Centers vertically */
-        width: 100%;  /* Full width of the screen */
-        height: 33vh;  /* 1/3 of the screen height */
-        padding: 10px 0;  /* Optional spacing */
-        overflow-x: auto;  /* Enables horizontal scrolling if needed */
+        justify-content: center;  /* Centers the iframe horizontally */
+        align-items: center;  /* Centers it vertically (optional) */
+        width: 100vw;  /* Full width of viewport */
+        height: 80vh;  /* Adjust as needed */
+        overflow-x: auto;  /* Enables horizontal scrolling */
         overflow-y: hidden;  /* Prevents vertical scrolling */
+        padding: 10px 0;  /* Optional padding */
     }
 
+    /* The iframe container to control sizing */
     .iframe-container {
         display: block;
-        width: 80%;  /* Keep it a reasonable width */
-        max-width: 400px;  /* Prevents it from getting too wide */
-        height: 33vh;  /* Set to 1/3 of phone screen */
+        width: 90%;  /* Adjust width as needed */
+        max-width: 1200px;  /* Ensures it doesn't stretch too wide */
+        height: 600px;  /* Adjust height as needed */
         border: none; /* Removes border */
     }
 
+    /* Styles for the iframe itself */
     .drive-folder {
         width: 100%;
         height: 100%;
