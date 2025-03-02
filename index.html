@@ -6,11 +6,12 @@
     <title>Affordable Travel - 实惠旅游</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevents right-side white space */
+}
+
 header {
     background-color: #E75480;
     color: white;
@@ -19,12 +20,17 @@ header {
     margin-bottom: 0; /* Removes extra space below the header */
 }
        .section {
-    padding: 0 40px 40px 40px; /* Removes top padding, keeps left, right, and bottom */
+    padding: 0 20px 40px 20px; /* Reduce left & right padding */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Ensures it stays centered */
+    margin: 0 auto; /* Keeps it properly aligned */
 }
+
 
     .package, .cruise, .tour {
     border: 1px solid #ddd;
@@ -97,14 +103,15 @@ header {
 }
 .iframe-wrapper {
     display: flex;
-    justify-content: center;  /* Centers the iframe horizontally */
-    align-items: center;  /* Centers it vertically (optional) */
-    width: 100vw;  /* Full width of viewport */
-    height: 40vh;  /* Adjust as needed */
-    overflow-x: auto;  /* Enables horizontal scrolling */
-    overflow-y: hidden;  /* Prevents vertical scrolling */
-    padding: 0;  /* Remove all padding */
-    margin-top: 0 !important; /* Force margin removal */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensures it doesn’t exceed the screen width */
+    max-width: 1200px; /* Keeps it aligned properly */
+    height: 40vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+    margin: 0 auto; /* Centers properly */
 }
 
 
