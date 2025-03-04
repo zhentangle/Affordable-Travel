@@ -130,7 +130,9 @@ header {
         height: 100%;
         border-radius: 10px;  /* Optional rounded corners */
     }
-
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeChat Mini Program Redirect</title>
 
     </style>
   <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
@@ -145,6 +147,8 @@ header {
                 class="drive-folder"></iframe>
     </div>
 </div> 
+<button onclick="openWeChatMiniProgram()">Open Mini Program</button>
+
     <div class="section" id="packages">
         <h2>旅游套餐</h2>
 
@@ -460,5 +464,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 </script>
+ <script>
+        function openWeChatMiniProgram() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            if (userAgent.indexOf("micromessenger") !== -1) {
+                window.location.href = "weixin://dl/business/?t=xgA0XJlOccmF5PF"; // Open Mini Program
+            } else {
+                window.location.href = "https://yourwebsite.com"; // Fallback Web Page
+            }
+        }
+    </script>
 </body>
 </html>
